@@ -1,0 +1,35 @@
+.placement {
+  width: 92%;
+  margin: 3vh auto;
+}
+
+div button {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 992px) {
+  div.form-group > div  {
+    margin-bottom: 1vh;
+  }
+
+  button {
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    width: 100px;
+    margin-right: 4vw;
+  }
+}
+
+@media (min-width: 992px) {
+  div.form-group > div {
+    margin-bottom: 3vh;
+  }
+
+  button {
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    width: 120px;
+    margin-right: 2vw;
+  }
+}

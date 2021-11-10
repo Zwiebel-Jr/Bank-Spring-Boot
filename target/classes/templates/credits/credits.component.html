@@ -1,0 +1,34 @@
+<div class="row no-gutters placement">
+  <div class="col-12">
+    <div class="row no-gutters">
+      <div class="col-12">
+        <button type="button" class="btn btn-primary" [routerLink]="['/credits/add/credit']">Добавить Кредит</button>
+      </div>
+    </div>
+    <div class="row no-gutters padding-top" *ngIf="!credits.length">
+      <h3>Оформленных Кредитов Пока Нет</h3>
+    </div>
+    <div class="row no-gutters padding-top" *ngIf="credits.length">
+      <p-table [value]="credits" class="ui-table-responsive" selectionMode="single" (onRowSelect)="rowSelected($event.data.id)">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Клиент</th>
+            <th>Тип Кредита</th>
+            <th>Сумма Кредита</th>
+            <th>Валюта</th>
+            <th>Дата Заключения Кредита</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-credit let-rowData>
+          <tr [pSelectableRow]="rowData">
+            <td>{{credit.client.lastName}} {{credit.client.firstName}}</td>
+            <td>{{credit.type.name}}</td>
+            <td>{{credit.sum}}</td>
+            <td>{{credit.type.currency}}</td>
+            <td>{{credit.date}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>

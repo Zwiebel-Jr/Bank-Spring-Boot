@@ -1,0 +1,20 @@
+.placement {
+  width: 92%;
+  margin: 3vh auto;
+}
+
+.padding-top {
+  padding-top: 20px;
+}
+
+@media (max-width: 992px) {
+  div button {
+    margin-right: 4vw;
+  }
+}
+
+@media (min-width: 992px) {
+  div button {
+    margin-right: 2vw;
+  }
+}
